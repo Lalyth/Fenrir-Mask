@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<GamePath>D:\SteamLibrary\steamapps\common\PlateUp\PlateUp</GamePath>
-
 		<TargetFramework>net472</TargetFramework>
 		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
-		<AssetBundlePath>D:\Fenrir Mask\Ressources\fenrirmask.assets</AssetBundlePath>
+		<AssetBundlePath>UnityProject - FenrirMask\content\mod.assets</AssetBundlePath>
 	</PropertyGroup>
-
-  	<PropertyGroup>
-  		<PlateUpGameFolder>D:\SteamLibrary\steamapps\common\PlateUp\PlateUp</PlateUpGameFolder>
-		<PlateUpWorkshopFolder>D:\SteamLibrary\steamapps\workshop\content\1599600</PlateUpWorkshopFolder>
-  	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Yariazen.PlateUp.ModBuildUtilities" Version="1.11.5" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Compile Remove="UnityProject - FenrirMask\**" />
+	  <None Remove="UnityProject - FenrirMask\**" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -22,56 +20,4 @@
 		<Folder Condition="Exists('Changelogs\Github')" Include="Changelogs\Github" />
 		<Folder Condition="Exists('Changelogs\Workshop')" Include="Changelogs\Workshop" />
 	</ItemGroup>
-
-	<ItemGroup>
-		<Reference Include="Controllers">
-			<HintPath>$(PlateUpGameFolder)\PlateUp_Data\Managed\Controllers.dll</HintPath>
-		</Reference>
-
-    	<Reference Include="Kitchen.Common">
-    		<HintPath>$(PlateUpGameFolder)\PlateUp_Data\Managed\Kitchen.Common.dll</HintPath>
-    	</Reference>
-
-    	<Reference Include="Kitchen.GameData">
-    		<HintPath>$(PlateUpGameFolder)\PlateUp_Data\Managed\Kitchen.GameData.dll</HintPath>
-    	</Reference>
-
-    	<Reference Include="KitchenMods">
-    		<HintPath>$(PlateUpGameFolder)\PlateUp_Data\Managed\KitchenMods.dll</HintPath>
-		</Reference>
-
-		<Reference Include="UnityEngine">
-			<HintPath>$(PlateUpGameFolder)\PlateUp_Data\Managed\UnityEngine.dll</HintPath>
-		</Reference>
-
-		<Reference Include="Unity.Entities">
-			<HintPath>$(PlateUpGameFolder)\PlateUp_Data\Managed\Unity.Entities.dll</HintPath>
-		</Reference>
-
-		<Reference Include="UnityEngine.AssetBundleModule">
-			<HintPath>$(PlateUpGameFolder)\PlateUp_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
-		</Reference>
-
-		<Reference Include="UnityEngine.CoreModule">
-      		<HintPath>$(PlateUpGameFolder)\PlateUp_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
-    	</Reference>
-
-		<Reference Include="Sirenix.Serialization">
-			<HintPath>$(PlateUpGameFolder)\PlateUp_Data\Managed\Sirenix.Serialization.dll</HintPath>
-		</Reference>
-
-		<Reference Include="KitchenLib">
-			<HintPath>D:\SteamLibrary\steamapps\workshop\content\1599600\2898069883\KitchenLib-Workshop.dll</HintPath>
-		</Reference>
-	</ItemGroup>
-
-	<ItemGroup>
-		<Blacklist Include="$(AssemblyReferencePath)\System.Buffers.dll"/>
-		<Blacklist Include="$(AssemblyReferencePath)\Microsoft.Extensions.Logging.Abstractions.dll"/>
-		<Blacklist Include="$(AssemblyReferencePath)\Mono.Posix.dll" />
-		<Blacklist Include="$(AssemblyReferencePath)\Mono.Security.dll" />
-		<Blacklist Include="$(AssemblyReferencePath)\System.Memory.dll" />
-		<Blacklist Include="$(AssemblyReferencePath)\System.Runtime.CompilerServices.Unsafe.dll" />
-	</ItemGroup>
-
 </Project>
