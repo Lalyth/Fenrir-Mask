@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
+		<GamePath>D:\SteamLibrary\steamapps\common\PlateUp\PlateUp</GamePath>
 		<TargetFramework>net472</TargetFramework>
 		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
 		<AssetBundlePath>UnityProject - FenrirMask\content\mod.assets</AssetBundlePath>

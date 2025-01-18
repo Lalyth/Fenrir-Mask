@@ -398,3 +398,5 @@ FodyWeavers.xsd
 *.sln.iml
 
 !UnityProject - FenrirMask/**
+UnityProject - FenrirMask/Fenrir Mask.unity
+UnityProject - FenrirMask/Fenrir Mask.unity.meta
